@@ -1,640 +1,280 @@
 <!DOCTYPE html>
-<html lang="la">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vita Ficta: Larva Deceptionis — Editio Amplificata</title>
-<style>
-body {
-    font-family: "Georgia", "Times New Roman", serif;
-    max-width: 900px;
-    margin: 2rem auto;
-    line-height: 1.7;
-    color: #1a1a1a;
-    padding: 0 1.5rem;
-    background: #fefefe;
-}
-h1, h2, h3 {
-    text-align: center;
-    font-weight: normal;
-    line-height: 1.3;
-    color: #2c2c2c;
-}
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.2rem;
-    letter-spacing: 0.5px;
-}
-.subtitle {
-    text-align: center;
-    font-style: italic;
-    color: #555;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-.author {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 3rem;
-    font-size: 0.95rem;
-    color: #444;
-}
-.section-title {
-    margin-top: 3.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: normal;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.5rem;
-}
-.subsection-title {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: normal;
-    font-style: italic;
-    color: #444;
-}
-p {
-    text-align: justify;
-    margin-bottom: 1.2rem;
-    text-indent: 1.5em;
-}
-p.no-indent {
-    text-indent: 0;
-}
-.dialogue {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: #f9f9f9;
-    border-left: 3px solid #999;
-}
-.dialogue p {
-    text-indent: 0;
-    margin-bottom: 0.5rem;
-}
-.speaker {
-    font-weight: bold;
-    color: #333;
-}
-.objection-box {
-    margin: 1.5rem 0;
-    padding: 1rem 1.5rem;
-    background: #f5f5f5;
-    border-left: 3px solid #666;
-}
-.objection-box p {
-    text-indent: 0;
-}
-.exemplum {
-    margin: 1rem 0 1rem 2rem;
-    font-style: italic;
-    color: #333;
-}
-.footer {
-    margin-top: 5rem;
-    font-size: 0.9rem;
-    color: #777;
-    text-align: center;
-    border-top: 2px solid #ccc;
-    padding-top: 1.5rem;
-}
-.epigraph {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    margin: 2rem auto;
-    max-width: 600px;
-    font-size: 0.95rem;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mask - Collection of Works</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e, #0f0f1e);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #00ffcc, #00ff88, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a8dadc;
+            font-style: italic;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            animation: slideUp 1s ease-out;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
+            border-color: rgba(0, 255, 204, 0.6);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #00ffcc;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+        }
+
+        .card-description {
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            display: inline-block;
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .card-link:hover {
+            color: #00ffcc;
+            text-decoration: underline;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #00ffcc;
+            margin: 3rem 0 2rem 0;
+            border-bottom: 2px solid rgba(0, 255, 204, 0.3);
+            padding-bottom: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .server-info {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(0, 255, 204, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 204, 0.3);
+        }
+
+        .server-info p {
+            color: #a8dadc;
+            font-size: 0.9rem;
+        }
+
+        .server-info a {
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .server-info a:hover {
+            color: #00ffcc;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Vita Ficta: Larva Deceptionis</h1>
-<p class="subtitle">De corruptione cordis humani in saeculo artis, pecuniae, et gloriae simulatae</p>
-<p class="subtitle" style="font-size: 0.9rem; margin-top: 0.5rem;">Editio Amplificata et Perfecta</p>
-<p class="author">Scriptum a Bob Smith</p>
-
-<div class="epigraph">
-<p>«Veritas liberabit vos» — sed prius vos terrebit.<br>
-«Quis ascendet in montem Domini? Innocens manibus et mundo corde.»<br>
-— Psalmus XXIII</p>
-</div>
-
-<h2 class="section-title">Praefatio: De Natura Huius Operis</h2>
-
-<p class="no-indent">
-Haec scriptura est testimonium et monitionis vox. Non est opus factionis nec consilium publicum ad corrigendas leges; est planctus animae humanae in saeculo spectaculorum. Loquitur conscientia, non ordo politicus. Clamat quod homo factus est ad veritatem, et elegit imaginem. Et tamen iter reversionis nondum clausum est.
-</p>
-
-<p>
-Scribimus non ut condemnemus hominem — nam et nos ipsi rei sumus — sed ut memoriam excitemus. Memoriam illius quod fuimus antequam nos venderemus. Memoriam dignitatis quae non empta est sed data. Memoriam vultus nostri ante speculum mentis, non ante speculum fori.
-</p>
-
-<p>
-Si haec verba te vulnerant, noli recedere. Vulnus est initium sanationis. Si te accusant, audi: non vox nostra te accusat, sed tua ipsius conscientia quae diu tacita iacuit. Nos solum aperimus ianuam; tu ipse decernes an intrabis.
-</p>
-
-<h2 class="section-title">I. De Larva Qua Homo Se Occultat</h2>
-
-<p class="no-indent">
-Fuit tempus in quo vultus hominis testimonium animae fuit. Oculi portabant pondus conscientiae; lingua, sive benigna sive saeva, tamen sua erat. Homo ambulabat simplex, apertus, vulnerabilis; et hoc vocabatur veritas.
-</p>
-
-<p>
-Marcus Aurelius imperator in castris bellicis scripsit <i>Meditationes</i> suas — non ad publicationem, non ad gloriam, sed ad conscientiam propriam. Verba eius non composita erant ad placendum populo, sed ad corrigendam animam. "Quotidie," scripsit, "considera te moriturum; sic vives honeste." Ecce vir qui imperium mundi regebat, tamen larvam non gerebat. Cogitatio eius erat nuda sicut anima eius.
-</p>
-
-<p>
-Diogenes Cynicus, cum Alexander Magnus ei dixisset "Pete quidquid vis," respondit solum: "Recede a sole meo." Vir potentissimus mundi et vir pauperrimus se mutuo viderunt — unus cum larva imperii, alter sine ulla veste praeter veritatem. Et Alexander, narrant, postea dixit: "Si non essem Alexander, vellem esse Diogenes." Nam sensit, etiam in pompa sua, catenam larvae quam gerebat.
-</p>
-
-<p>
-Sed paulatim, dum manus nostrae ad turrem scientiae extentae sunt et mentes nostrae ferro, filo, imagine artificiosa implicatae sunt, res antiqua defecit. Spiritus humanus, olim nudus et intrepidus, nunc sub velis latet. Non iam proferimus faciem; proferimus personam. Sic orta est vita ficta.
-</p>
-
-<p>
-Haec larva non repente nata est. Texitur lente, filo post filum — mendacium super mendacium, blandimentum super occultationem. Risus coactus in imagine electronica; gloriatio sub specie humilitatis; figura politissima quae abscondit lassitudinem oculorum et desperationem cordis. Hae parvae fictiones coeunt donec efficiant personam completam: personam quae laudatur, invidetur, amatur — sed falsa est. Post tempus, non iam larvam gerimus: ipsa larva facti sumus.
-</p>
-
-<p>
-Augustinus Hipponensis scripsit: "Fecisti nos ad te, et inquietum est cor nostrum donec requiescat in te." Sed nos mutavimus verba eius. Nunc dicimus tacite: "Fecimus nos ad spectaculum, et inquietum est cor nostrum donec laudetur a turba." Deum vertimus in multitudinem; adorationem in plausum; requiem in famam. Et cor, quod factum est ad infinitum, venditum est finito.
-</p>
-
-<p>
-In saeculis prioribus malitia manifesta fuit. Ambulabat cum gladio et igne; nomen suum confitebatur; regnabat metu. Nero ardebat Christianos; Diocletianus persequebatur ecclesiam; tyrannus cognoscebatur ut tyrannus. Nunc autem malitia ambulat in lumine dulci et sub verbo "progressus." Vox eius mitis est, tactus suavis, consilium idem: dominari et lucrari. Serpens veteris horti iterum sibilat — non iam ex arbore, sed ex lumine visoris electronici — promittens: "Videberis, laudaberis, eris quasi deus in regno imaginum." Et homo respondet: "Fiat."
-</p>
-
-<p>
-Ita surgit vita ficta: non vita vivenda, sed vita ostendenda. Homo non agit ut sit iustus, sed ut videatur iustus. Non loquitur ut dicat verum, sed ut placeat algorithmis machinarum quae mensurant plausum. Conscientia iam non est lex cordis, sed scena multitudinis. Sinceritas fit infirmitas; hypocrisis fit sapientia. Humilitas deridetur; arrogantia velata laudatur. Hoc est initium ruinae.
-</p>
-
-<h2 class="section-title">II. De Actoribus Saeculi: Politici, Magistratus, Artifices, Infamatores</h2>
-
-<p class="no-indent">
-Cum larva uni homini ministrabat, erat culpa; cum servire coepit universis, facta est cultura. Totus mundus factus est theatrum — sed theatrum sine veritate post scaenam.
-</p>
-
-<p>
-Primus artem didicit politicus. Intellexit populum non iam quaerere veritatem, sed solacium; non consilium, sed narrativum. Verba eius iam non narrant quod est, sed quod multitudo audire vult. Promissiones factae sunt nubes sine pluvia: pulchrae in caelo, vacuae in terra. Loquitur de iustitia dum suffragia numerat; loquitur de sacrificio dum thesauros colligit; loquitur de unitate dum seminat divisionem propter victoriam suam. Non iam dux est; negotiator somnii est. Non minister civitatis, sed mercator narrationis.
-</p>
-
-<p>
-Cicero olim clamavit contra Catilinam: "Quousque tandem abutere patientia nostra?" Verba eius erant gladius veritatis, etsi ornatus eloquentia. Sed nunc rhetor loquitur non ut vulneret malitiam, sed ut placeat auri largitoribus. Lingua eius venalis est; indignatio eius simulata; passio eius mercata.
-</p>
-
-<p>
-Post eum venit scriba et magistratus, facie frigida et voce sine sanguine. Hic gestat larvam officii. Dicit se servare ordinem, pacem, salutem publicam; sed saepe custodit solum machinam quae ipsum nutrit. Lex, nata ad protegendum humilem, fit catena tacita multitudinis. Ferrum non videtur, tamen nullus est liber. Iustitia, quae deberet esse caeca ad favorem, fit caeca solum ad veritatem.
-</p>
-
-<p>
-Deinde surrexit infamator — propheta vacuitatis, sacerdos imaginis — non electus per sapientiam neque probatus per virtutem, sed elevatus per gratiam machinarum quae vultum eius omnibus ostendunt. Vox eius lenis est, imago nitida, vita eius videtur quasi perpetua laetitia venalis. Fingit pietatem, fingit indignationem, fingit misericordiam vel rebellionem, sicut mercatus imperat. Devotio eius est ad se ipsum; fides eius est in attentione aliena; sacrificium eius est… nihil. Et multitudo sequitur eum, adorans imaginem hominis, non hominem. Nam homo latet post imaginem — aut fortasse iam non manet: solum imago superest, vacua intra.
-</p>
-
-<p>
-Artifex pingit propter lucrum, non propter pulchritudinem quae animam illuminat sed propter pulchritudinem quae pecuniam generat. Doctor scientiae flectit veritatem ut pecunia detur; praedicator blanditur ne largitor abeat. Ipsa res sacra nota pretio venditur. Theologia fit merchandising; gratia fit negotium; crux fit logo.
-</p>
-
-<p>
-Sic omnis ordo mortalium larvam induit et se incurvat deo plausus. Veritas fit res inelegans, res "toxica," res impopularis. Virtus fit res mercabilis. Humanitas seipsam peragit usque ad mortem — sed mors erit in lumine gloriae simulatae, cum milibus oculorum spectantium et nemo vere videns.
-</p>
-
-<h3 class="subsection-title">II-B. De Larva Necessaria et Larva Mortifera:<br>Discretio Inter Velum Caritatis et Velum Cupiditatis</h3>
-
-<p class="no-indent">
-Sed cave ne condemnes omnem larvam aequo modo. Non omnis larva est malum. Non omnis velum est fraus. Oportet nos discernere inter personam necessariam et personam mortem ferentem.
-</p>
-
-<p>
-Medicus qui consolatur aegrotum morientem cum spe, etsi ipse spem non sentit in corde suo, exercet misericordiam, non fraudem. Gestat larvam fortitudinis ut infirmus non desperet. Hoc est caritas, non hypocrisis.
-</p>
-
-<p>
-Mater quae celat dolorem suum ne parvuli eius terreatur agit ex amore. Pater qui laborat in opere quod odit ut filios nutriat gestat larvam patientiae propter bonum maius. Miles qui tremit intus sed stat firmus coram hoste servat fratres suos. Hi gerunt personas non ad exaltationem sui, sed ad protectionem alterius.
-</p>
-
-<p>
-Iudex qui induit togam et loquitur cum gravitate non fingit esse iudex — est iudex. Persona est officium eius, non fraus eius. Sacerdos in stola, magister in cathedra, rex in corona: hae sunt larvae officii, non larvae vanitatis. Servunt ordini communi; significant auctoritatem veram, non imaginem vacuam.
-</p>
-
-<div class="objection-box">
-<p><strong>Distingue ergo:</strong></p>
-<p>• <strong>Larva caritatis</strong> a <strong>larva cupiditatis</strong></p>
-<p>• <strong>Velum pudoris</strong> a <strong>velo rapacitatis</strong></p>
-<p>• <strong>Silentium sapientiae</strong> a <strong>silentio timoris</strong></p>
-<p>• <strong>Persona officii</strong> a <strong>persona ambitionis</strong></p>
-<p>• <strong>Fortitudo simulata pro aliis</strong> a <strong>felicitate simulata pro se</strong></p>
-</div>
-
-<p>
-Prima servit alteri; secunda servit sibi. Prima descendit ut alium elevet; secunda ascendit ut se glorificet. Prima velat se propter amorem; secunda velat se propter timorem aut avaritiam.
-</p>
-
-<p>
-Sed larva mortifera alia est. Mercator qui vendit rem inutilem quasi necessariam, et faciem honestatis induit dum furat — hic gerit larvam mortem ferentem. Politicus qui promittit pacem dum bellum parat, et lacrimat coram populo dum in occulto ridet — hic est homicida animae publicae. Infamator qui fingit amicitiam cum sequentibus suis sed solum numerat pecuniam ex attentione eorum — hic vendit illusionem pro veritate.
-</p>
-
-<p>
-Quomodo distingues? Quaere: <i>Cui servit haec larva?</i> Si servo ego, damnata est. Si servit alter, benedicta sit — modo temporaria maneat, nec fiat identitas mea. Nam etiam larva caritatis, si numquam deponitur, potest efficere ut obliviscaris quis sis sub ea.
-</p>
-
-<p>
-Seneca dixit: "Persona est quod videris; character est quod es." Larva bona servit characterem bonum tempore necessitatis. Larva mala occultat characterem malum tempore omni. Et larva pessima hanc facit: destruit characterem donec solum larva supersit, vacua intra sicut sepulchrum dealbatum.
-</p>
-
-<h2 class="section-title">III. Radix Omnium Larvarum: Pecunia</h2>
-
-<p class="no-indent">
-Omnis larva maligna uni domino servit — pecuniae. Sub omni promisso, sub omni imagine electronica, sub omni edicto, sub omni spectaculo latet una ara: ara auri. Pecunia non est iam minister hominis; facta est mensura eius, magister eius, deus eius.
-</p>
-
-<p>
-Paulus Apostolus scripsit: "Radix omnium malorum est cupiditas." Non dixit "pecunia est malum," sed "amor pecuniae." Moneta ipsa neutra est — metallum aut papyrus aut numerus in machina. Sed quando fit finis vitae, quando fit deus occultus, quando fit mensura dignitatis humanae — tunc fit idolum cruentum.
-</p>
-
-<p>
-Promittit securitatem sed parit servitutem; promittit solacium sed accendit famem quae numquam satiatur. Non ipsa moneta corrumpit, sed cultus monetae. Homo olim quaesivit veritatem, sapientiam, virtutem, Deum; nunc quaerit lucrum. Omnis cogitatio et actio vertitur in negotiationem. Anima ipsa fit merx. Tempus fit moneta. Attentio fit moneta. Amor fit moneta. Religio fit moneta. Veritas ipsa nota pretio venditur.
-</p>
-
-<p>
-Pecunia sussurrat artifici: "Fac pulchritudinem quae venditur, non quae loquitur ad animam. Pinge quod placet multitudini, non quod revelat veritatem. Musica tua sit grata auribus, non veritatis testis." Sussurrat docto: "Noli quaerere quod rectum est, sed quod fundabitur. Noli publicare inventionem quae imperium pecuniae minuit. Vende scientiam tuam ei qui plus offert." Sussurrat praedicatori: "Tace de peccato divitum, ne largitor abeat. Praedica prosperationem, non crucem. Fac ecclesiam negotium, non hospitium animarum."
-</p>
-
-<p>
-Sic ara conscientiae facta est forum silentii. Veritas venditur ei qui plus dat. Iustitia inclinatur ad aurum. Misericordia ipsa fit spectaculum proficuum.
-</p>
-
-<p>
-Politicus fit pontifex huius dei, cremando promissa quasi thus ante idola potestatis. Suffragia emit verbis; postea vendit potestatem factis. Scriba custodit templum legis pecuniae. Infamator est evangelista eius, praedicans invidiam et concupiscentiam loco fidei et sapientiae: "Vide quomodo vivo! Eme quod emo! Eris felix sicut ego videor!" Et populus — fessus labore, anxius corde, vacuus anima — defert munera: tempus suum, laborem suum, pacem suam, filios suos.
-</p>
-
-<p>
-At iste deus crudelis est. Moloch antiquus devorabat infantes in igne; Mammona modernus devorat animas in lumine frigido lucri. Numquam satiatur. Exigit non solum opera tua, sed te ipsum. Docet dignitatem non nasci ex virtute, charactere, fidelitate, sacrificio — sed ex possessione. Paupertas fit dedecus; divitiae fiunt quasi innocentia. "Dives est," dicimus, "ergo sapiens est. Pauper est, ergo negligens est." Sic avaritia consecratur et humilitas deridetur.
-</p>
-
-<p>
-Etiam misericordia fit spectaculum mercabile. Pauper inducitur quasi ornamentum virtutis alienae: "Ecce quomodo curo de pauperibus!" — sed cura fit photografia, et photografia fit gloria, et gloria fit lucrum. Pietas, iustitia, compassio — omnia sub praetio sunt. Pretium conscientiae crescit; copia integritatis deficit. Pecunia non solum regit nationes; insidet super cor humanum sicut daemon super possessum.
-</p>
-
-<p>
-Et quia omnia venalia sunt, nihil sacrum manet. Amor mercatur; fides mercatur; spes mercatur. Matrimonium fit contractus; filius fit investmentum; amicitia fit networking. Domus fit asset; mors fit industry; vita ipsa fit productum consumendum.
-</p>
-
-<p>
-Christus antiquus mercatores e templo eiecit, clamans: "Domus mea domus orationis vocabitur; vos autem fecistis illam speluncam latronum." Si nunc veniret, universum mundum purgare oporteret. Nam totus orbis terrarum factus est templum Mammonae. Et nos sumus et sacerdotes et victimae.
-</p>
-
-<h2 class="section-title">Interludium: Dialogus Animae cum Larva Sua</h2>
-
-<p class="no-indent" style="font-style: italic; text-align: center; margin: 2rem 0;">
-In silentio noctis, cum machinae silent et multitudo dormit,<br>
-anima hominis vigilat et videt larvam suam quasi alterum se in speculo.<br>
-Et incipit locutionem.
-</p>
-
-<div class="dialogue">
-<p><span class="speaker">Anima:</span> Quis es tu qui vultum meum tegis?</p>
-
-<p><span class="speaker">Larva:</span> Sum protectio tua. Sum fortitudo tua. Sum gloria tua.</p>
-
-<p><span class="speaker">Anima:</span> A quo me protegis?</p>
-
-<p><span class="speaker">Larva:</span> A iudicio crudeli mundi. A reprobatione. A solitudine. A veritate quae te vulneraret.</p>
-
-<p><span class="speaker">Anima:</span> Sed ego sum sola etiam tecum. Magis sola quam umquam antea.</p>
-
-<p><span class="speaker">Larva:</span> Non potes esse sola. Vide: mille homines te laudant in foro electronico. Centum imagines tuae procedunt per mundum. Nomen tuum cognitum est.</p>
-
-<p><span class="speaker">Anima:</span> Sed non me laudant. Te laudant. Non me cognoscunt. Te vident. Ego lateo post te, et latendo morior.</p>
-
-<p><span class="speaker">Larva:</span> Quid interest? Tu es ego; ego sum tu. Sumus unum.</p>
-
-<p><span class="speaker">Anima:</span> Non. Tu es imago. Ego sum veritas. Tu es quod videris. Ego sum quod sum. Tu crescis; ego minuor. Tu vivis in luce; ego emaciare in umbra tua.</p>
-
-<p><span class="speaker">Larva:</span> Veritas tua nullum pretium habet in hoc mundo. Nullus eam emit. Nullus eam laudat. Imago mea valet aurum, laudem, potestatem. Sine me, nihil es.</p>
-
-<p><span class="speaker">Anima:</span> Aurum tuum me necat. Laus tua me suffocant. Potestas tua me catena adligat. Dives sum te stante; pauper sum te possidente.</p>
-
-<p><span class="speaker">Larva:</span> Si me deponis, omnes te relinquent. Amici tui recedent. Laudatores tui tacebunt. Mundus te obliviscetur. Solus eris, parvus, insignificans. Timesne hoc?</p>
-
-<p><span class="speaker">Anima:</span> [Silentium longum.] Sic… timeo. Sed plus timeo hoc: vivere centum annos et numquam vivere. Videre mille milia oculorum et numquam videri. Audiri ab omnibus et numquam audiri. Amari propter imaginem falsam et mori sine amore vero. Hoc est mors in vita. Hoc est infernus sine igne — infernus lucis frigidae ubi omnes vident et nemo videt.</p>
-
-<p><span class="speaker">Larva:</span> Sine me vita tua nimis dura erit. Vulneraberis. Flebis. Falleris.</p>
-
-<p><span class="speaker">Anima:</span> Fortasse. Sed flebis lacrimis veris, non compositis. Vulneraberis in corde vero, non in imagine. Falleris, sed discere poteris. Cum te geram, non possum cadere — quia iam iaceo. Non possum mori — quia iam mortuus sum.</p>
-
-<p><span class="speaker">Larva:</span> Et quid facies sine me? Quomodo vives?</p>
-
-<p><span class="speaker">Anima:</span> Nescio. Sed experiar. Vivam parvus aut magnus, sed vivam. Loquar verum aut tacebor, sed non mentiar. Amabor aut non amabor, sed non fingeam amorem. Cadere possum — sed cadere libera, non catenis tuis adligata.</p>
-
-<p><span class="speaker">Larva:</span> Stultus es. Mundus te devorabit.</p>
-
-<p><span class="speaker">Anima:</span> Aut mundus me inveniet. Aut ego me inveniam. Sufficit unum e duobus.</p>
-
-<p style="text-align: center; margin-top: 1.5rem; font-style: italic;">[Larva tremit, et paulatim evanescit sicut fumus ante ventum.<br>
-Anima manet nuda, tremens, sed vivens.]</p>
-</div>
-
-<h2 class="section-title">IV. De Iudicio Larvae et Initio Reversionis</h2>
-
-<p class="no-indent">
-Et tamen parva spes manet — non spes in imperiis neque in consiliis publicis, sed in paucis hominibus qui audent larvam deponere. Isti iridentur, vocantur stulti, vocantur "non-professionales"; tamen isti sunt semina libertatis futurae. Nam cultura non mutatur per leges sed per animas.
-</p>
-
-<p>
-Unus vultus sincerus plus lucis portat quam mille imagines politissimae electronice perfectae. Una confessio vera — "peccavi," "nescio," "timeo," "opus auxilii habeo" — plus valet quam multitudo orationum compositarum. Una conscientia vigilans in silentio potest redimere saeculum dormiens in mendacio.
-</p>
-
-<p>
-Libertas incipit ubi larva cadit. Ubi "sic" significat sic, et "non" significat non. Ubi amor non habet pretium et veritas non venditur. Ubi homo audet manere parvus in mundo qui adorat magnitudinem. Ubi potest dicere: "Hoc est quod sum. Non perfectus. Non maximus. Non spectacularis. Sed verus. Et hoc sufficit."
-</p>
-
-<p>
-Et veritas ipsa, diu despecta et derisa, resurget ut iudex in hora finali. Omnis larva tabescet sicut cera ante solem: larva politici, larva magistratus, larva infamatoris, larva mercatoris sanctitatis, larva hominis communis. Nulla erit dissimulatio, nulla excusatio, nullum spectaculum fabricatum, nulla imago artificiosa. Solum facies, et veritas faciei. Solum cor, et veritas cordis.
-</p>
-
-<p>
-Sed hoc iudicium non est solum condemnatio: est etiam misericordia magna. In illa hora homo memorabitur quis fuerit antequam se vendidit. Memorabitur dignitatem suam non fuisse emptam sed datam. Memorabitur se non factum esse pro foro, nec pro turba, nec pro oculis extraneorum, sed ad imaginem Dei — imaginem Veri.
-</p>
-
-<p>
-Redemptio non veniet per consilia politica aut leges novae. Veniet cum homo stabit in lucem sine larva et dicet: "Anima mea non veniet amplius in mercatum. Non sum res vendenda. Sum homo vivens." Ille gradus est primus reditus domum — domus ad animam propriam.
-</p>
-
-<h3 class="subsection-title">Disciplinae Reversionis: Via Practica ad Libertatem</h3>
-
-<p class="no-indent">
-Sed quomodo larva deponitur? Non per decisionem unam, sed per disciplinas cotidianas. Non per revolutionem subitam, sed per reverentiam lentam ad veritatem. Ecce viae:
-</p>
-
-<p><strong>Prima Disciplina: Silentium Sacrum.</strong> Elige unum diem septimanae — aut saltem unam horam — sine imagine electronica, sine spectaculo, sine voce machinarum. Solus cum conscientia tua. Sine audientia. Sine testimonio. Sine laude possibili. Hic, in silentio, invenies an quid manet sub larva. Timebis primo; tunc respirabis.</p>
-
-<p><strong>Secunda Disciplina: Confessio Parva.</strong> Dic uni amico vero unam rem veram et difficilem. "Timeo." "Erravi." "Non scio." "Invidio te." "Opus auxilii habeo." Verba haec sunt semina libertatis. Vulnerabilitas est fortitudo occulta. Ubi confiteris infirmitatem, ibi invenis veritatem.</p>
-
-<p><strong>Tertia Disciplina: Opus Occultum.</strong> Fac rem quae non vendetur nec ostendetur. Hortulaneria quam solus videbis. Pictura quae ardebit. Epistola quae numquam mittetur. Carmen quod nullus leget. Hoc docet: "Possum esse sine spectatoribus. Valeo etiam sine laude." Hoc liberat animam a tyrannide oculorum alienorum.</p>
-
-<p><strong>Quarta Disciplina: Paupertas Voluntaria.</strong> Elige unam rem commodam et eam relinque pro tempore. Non propter virtutem ostendendam — hoc esset iterum larva! — sed propter discendam libertatem. "Possum vivere sine hoc. Non sum quod possideo." Haec cognitio rumpit catenam mammonae.</p>
-
-<p><strong>Quinta Disciplina: Custodia Linguae.</strong> Ante quam loquaris in consilio aut scribas in foro electronico, quaere te ipsum: "Hoc dico quia verum est, an quia laudabor? Loquor ad bonum alterius, an ad gloriam meam? Verba mea sunt ex conscientia, an ex calculo?" Si dubitas, tace. Silentium honestum melius est quam eloquentia venalis.</p>
-
-<p><strong>Sexta Disciplina: Comes Veritatis.</strong> Invenias unum hominem — uxorem, amicum, fratrem, patrem spiritualem — cui licentia sit dicere tibi veritatem sine timore. "Hic erras. Hic fingis. Hic mentiris tibi ipsi." Nullus potest se ipsum videre perfecte. Opus habemus speculo vivente qui nos amat satis ut nos vulneret.</p>
-
-<p><strong>Septima Disciplina: Memento Mortis.</strong> Quotidie memento: "Moriar. Fortasse hodie. Fortasse post quinquaginta annos. Sed moriar." Et quaere: "Si hoc esset ultimum diem, vellemne vivere sicut vivo? Vellemne esse quod videor, an quod sum?" Mors est magister veritatis, quia ante mortem omnis larva cadit.</p>
-
-<p>
-Hae disciplinae non sunt lex; sunt invitatio. Non sunt onus; sunt instrumenta libertatis. Non faciunt te perfectum; faciunt te verum. Et veritas, etsi humilis, est via ad pacem quam mundus dare non potest.
-</p>
-
-<h2 class="section-title">Obiectiones et Responsiones</h2>
-
-<p class="no-indent">
-Sed audiemus voces obiicientes. Respondeamus ergo, ne videamur fugere quaestionem.
-</p>
-
-<div class="objection-box">
-<p><strong>Obiectio I:</strong> "Semper fuit hypocrisis. Pharisaeus antiquus non melior erat quam infamator modernus. Politicus Romanus non verior erat quam politicus hodiernus. Nil novi sub sole."</p>
-</div>
-
-<p><strong>Responsio:</strong> Verum dicis, sed non totum. Sic, semper fuit hypocrisis — sed antiquitus erat vitium occultum. Pharisaeus fingere videbatur sanctus, sed lex Dei ipsum accusabat. Politicus Romanus simulabat virtutem, sed philosophi eum reprehendebant. Hypocrisis erat peccatum contra normam veritatis.</p>
-
-<p>Nunc autem res mutata est. Hypocrisis facta est virtus aperta. Ars simulationis docetur in scholis negotii: "Finge ut facias." "Fake it till you make it." Infamator non celat fraudem suam; vendit eam. "Ecce quomodo appareor perfectus! Eme cursum meum!" Hoc est novum: non quod mentiamur, sed quod mentiri vocetur sapientia. Non quod larvam gerimus, sed quod larva adoratur.</p>
-
-<p>Et praeterea: machinae nostrae multiplicant larvam in infinitum. Pharisaeus unus fallebat centum. Infamator unus fallit centum milia per machinam electronicam. Velocitas, amplitudo, ars fabricationis — omnia aucta sunt. Sic malum antiquum factum est pestilentia nova.</p>
-
-<div class="objection-box">
-<p><strong>Obiectio II:</strong> "Impossibile est vivere in civitate sine aliqua larva. Negotiatio requirit faciem professionalem. Urbanitas requirit cordialis simulationem. Officium publicum requirit personam. Ergo tua doctrina est impracticabilis."</p>
-</div>
-
-<p><strong>Responsio:</strong> Distingue, ut iam diximus, larvam officii a larva ambitionis. Iudex qui induit togam non fingit esse iudex — est iudex. Toga est signum officii veri, non fraus. Medicus qui loquitur cum gravitate ad aegrotum exercet auctoritatem medicinam, non simulat eam.</p>
-
-<p>Etiam urbanitas non est necessario fraus. Cum dico "bonum diem" ei quem non amo, non mentior — opto bonum eius, etsi amor perfectus non manet. Hoc est civilitas, non hypocrisis. Civilitas est pons inter homines; hypocrisis est murus fictus qui videtur pons.</p>
-
-<p>Sed alia res est quando vendit cor suum pro mercatu. Quando magister docet quod non credit ut salariam accipiat. Quando medicus praescribit medicamentum inutile quia compania pharmaceutica eum mercat. Quando politicus dicit verba quae algorithmi mandant, non conscientia. Haec est larva mortifera, et haec rejicienda est, etiam si pretium sit magnum.</p>
-
-<div class="objection-box">
-<p><strong>Obiectio III:</strong> "Si omnes larvam deponerent, societas in chaos caderet. Necessitamus ordinem, roles, systemas. Tua 'veritas nuda' est anarchia."</p>
-</div>
-
-<p><strong>Responsio:</strong> Non dicimus omnes roles et ordines destruendos esse. Dicimus: sit ordo ex veritate, non ex simulatione. Sit lex ex iustitia, non ex commoditate potentum. Sit oeconomia ex servitio, non ex avaritia consecrata.</p>
-
-<p>Societas ordinata potest esse societas vera. Melius: debet esse. Nam societas fundata super larvam est domus super arenam: quando tempestas venit, cadit. Sed societas fundata super veritate — etsi imperfecta, etsi dura — stat.</p>
-
-<p>Et vide: non dicimus "omnes sint perfecti." Dicimus "omnes sint veri." Non "nullus erret," sed "nullus finget non errare." Non "omnes sancti," sed "nulli hypocritae." Haec est differentia.</p>
-
-<div class="objection-box">
-<p><strong>Obiectio IV:</strong> "Tu ipse scribens hoc opus fingis aliquid. Uteris nomine 'Bob Smith.' Uteris Latino culto quasi sapiens antiquus. Ergo et tu larva geris dum larvas accuses."</p>
-</div>
-
-<p><strong>Responsio:</strong> Hoc vulnus tangit, et bene. Sic, et nos rei sumus. Et ego qui scribo participo in culpa quam describo. Sed duo dico:</p>
-
-<p>Primum: accusatio hypocritae non fit falsa quia hypocrita eam dicit. Si fur clamat "furare malum est," veritas manet vera, etsi fur contradicat se ipsum vivendo. Medicus aeger potest adhuc medicinam veram docere.</p>
-
-<p>Secundum: hoc opus non scribitur ex loco sanctitatis perfectae, sed ex loco paenitentiae. Non dico "ego sum liber; vos servi estis." Dico "nos omnes servi sumus; sed via libertatis ostenditur." Scribo non ut me glorificem, sed ut conscientiam meam exonerem. Et si hoc ipsum sit larva… tunc iam confessus sum eam. Et confessio est initium mortis larvae.</p>
-
-<h2 class="section-title">Exempla Lucis: Illi Qui Vixerunt Vere</h2>
-
-<p class="no-indent">
-Ne desperemus in tenebris, memoremus illos qui vixerunt sine larva aut qui larvam fregerunt et liberi facti sunt. Non fuerunt perfecti, sed fuerunt veri. Et lux eorum adhuc lucet.
-</p>
-
-<p class="exemplum">
-Vidi agricolam qui laborat sine imagine in foro electronico. Manus eius in terra sunt, non in machina. Opus eius nemo videt nisi Deus et ager. Et tamen ager respondet veritati manuum eius: dat frumentum. Ille dormit somnum quietum, quia conscientia eius est libera a turba. Vita eius simplex est, sed non vacua. Parvus in oculis mundi, sed magnus in regno veri.
-</p>
-
-<p class="exemplum">
-Vidi magistram quae docet in schola parva propter amorem sapientiae, non propter pecuniam vel famam. Poterat laborare in universitate magna et nomen facere, sed elegit liberos pauperum docere. Discipuli eius pauci sunt, sed veri. Et cum moriet, memoria eius vivet in cordibus eorum qui per eam viderunt lucem.
-</p>
-
-<p class="exemplum">
-Vidi viduam quae dat eleemosynam in occulto. Nemo scit praeter conscientiam eius et Deum. Non photographat panem quem dat pauperi. Non scribit in foro electronico: "Hodie auxiliatus sum sine domo." Dat, et tacet. Et donum eius manet purum, non pollutum laude hominum.
-</p>
-
-<p class="exemplum">
-Vidi patrem qui confessus est filio adulto: "Erravi in educatione tua. Nimis durus fui. Nimis absens fui. Ignosce mihi." Fortior erat in confessione illa quam mille patres in gloria sua simulata. Et filius, lacrimans, respondit: "Nunc primum te cognosco, pater. Et amo te." Veritas vulneravit, sed sanavit.
-</p>
-
-<p class="exemplum">
-Vidi artificem qui picturae suas destruit si non sunt verae. "Haec placet," dicit, "sed non loquitur. Haec venderetur, sed mentitur. Ideo comburetur." Multi dicunt eum stultum esse, sed opera eius pauca et vera plus valent quam mille opera venalia. Quia anima in eis habitat.
-</p>
-
-<p class="exemplum">
-Vidi mulierem quae post quinquaginta annos matrimonii dixit: "Vultus meus senescit. Corpus meum deficit. Et tamen nunc primo me amo, quia nunc primo sum ego ipsa, non imago quam mundus voluit." Et maritus eius, tenens manum eius rugatam, respondit: "Nunc primo vere pulchra es."
-</p>
-
-<p>
-Hi sunt qui larvam fregerunt. Non perfecti, sed veri. Non spectabiles, sed liberi. Non laudati a multitudine, sed amati ab illis qui vere vident. In istis manet spes mundi. Nam unus homo verus plus lucis portat quam totum regnum simulationis.
-</p>
-
-<p>
-Et tu — quisquis es qui haec legis — potes esse unus ex illis. Non opus est tibi esse magnus. Opus est tibi esse verus. Et veritas, etsi parva, terram movet melius quam mendacium, etsi magnificum.
-</p>
-
-<h2 class="section-title">V. Visio Mulieris Coccineae: Revelatio Spiritus Saeculi</h2>
-
-<p class="no-indent" style="font-style: italic; text-align: center;">
-In spiritu raptus sum, et vidi visionem saeculi nostri sub specie aeternitatis.
-</p>
-
-<p class="no-indent">
-Et ecce: vidi mulierem sedentem super bestiam multorum capitum, amictam splendore et dolo. Vestimenta eius auro et purpura contexta erant, non texta manibus sed generata a machinis. Et vultus eius lucebat clarior ipsa veritate — sed lux erat lux artificialis, lux sine calore, lux quae oculos ferit sed cor non tangit.
-</p>
-
-<p>
-In manu eius dextera erat calix aureus plenus vini illusionis; et gentes terrae biberunt, et inebriatae sunt promissione eius. In manu sinistra tenebat speculum, sed speculum non monstrabat faciem spectantis — monstrabat faciem quam turba spectantem videre cupit. Et omnes qui in illud speculum intueri sunt facti duo: homo qui erat, et imago quae videbatur. Et paulatim homo mortuus est; imago supervixit.
-</p>
-
-<p>
-Et nomen eius scriptum erat super frontem triplici inscriptione:
-</p>
-
-<p style="margin-left: 2rem; font-style: italic;">
-CONSENSUS FABRICATUS<br>
-VERITAS SIMULATA<br>
-VANITAS MUNDI
-</p>
-
-<p>
-Loquebatur dulciter de libertate, sed spiritus eius portabat vincula aurea. Pacem pollicebatur, sed risus eius seminabat contentionem — nam pax eius erat pax sepulcri, pax ubi omnes consentiunt quia omnes mortui sunt. Amorem praedicabat, sed amor eius erat amor imaginum, non animarum.
-</p>
-
-<p>
-Et omnes qui eam viderunt concupierunt eam, quia artem habebat faciendi malum apparere pulchrum et mendacium sapientiam et servitutem libertatem et mortem vitam.
-</p>
-
-<p>
-Et reges terrae genua sua flexerunt coram ea propter lucrum, vendentes populos suos pro auro eius. Et mercatores terrarum pedes eius osculati sunt propter quaestum, vendentes attentionem animarum humanarum sicut olim venderunt corpora servorum. Et potentes eam vestiverunt ut fulgeret in spectaculo publico. Et imbecilles eam adoraverunt quasi deam liberationis. Et multitudo eam secuta est sicut parvuli sequuntur lucem super aquam cadentem — pulchram, sed non capiendam; lucentem, sed non calentem.
-</p>
-
-<p>
-Lingua eius loquebatur de misericordia — sed misericordia eius erat ad eos qui adsentiebantur. Manus eius ostendebant caritatem — sed caritas erat photographata et vendita. Vultus eius induebat sanctitatem — sed sanctitas erat pictura, non vita. Sub veste splendida latebat corruptio; et in corde eius erat vacuum sine amore, vacuum sine veritate, vacuum sine Deo.
-</p>
-
-<p>
-Haec erat spiritus vitae fictae, domina larvarum, magistra simulationis. Ex labiis eius procedebat doctrina commoditatis: "Quod expedit, id verum est. Quod placet, id bonum est. Quod proficit, id iustum est." Ex oculis eius ardebat ignis invidiae docens: "Compara te cum aliis. Dolere si minores habes; gloriari si plures habes."
-</p>
-
-<p>
-Per eam veritas ridebatur ut res "toxica." Per eam virtus venum ibat in mercato imaginum. Per eam amor tradebatur pro plausu. Pulchritudo eius ossa saeculi morientis tegebat sicut sepulchrum dealbatum tegit cadaver.
-</p>
-
-<p>
-Et bestia quam equitabat habebat capita septem, et singula capita nomen portabant:
-</p>
-
-<p style="margin-left: 2rem;">
-<strong>Primum caput: SUPERBIA</strong> — "Spectare et spectari. Vivere est videri."<br><br>
-<strong>Secundum caput: INVIDIA</strong> — "Comparare et dolere. Felicitas aliena est miseria tua."<br><br>
-<strong>Tertium caput: AVARITIA</strong> — "Moneta est mensura hominis. Divitiae sunt virtus."<br><br>
-<strong>Quartum caput: TIMOR</strong> — "Solus esse est perire. Turba est salus."<br><br>
-<strong>Quintum caput: ACEDIA</strong> — "Veritas est labor nimius. Facilius est credere narrativum."<br><br>
-<strong>Sextum caput: IRA</strong> — "Indignatio est identitas. Hostis tuus definit te."<br><br>
-<strong>Septimum caput: LUXURIA</strong> — "Omne desiderium implendum est. Negatio est oppressio."
-</p>
-
-<p>
-Et vidi quod bestia nutriebatur a machinis: machinis quae mensurant oculos, quae numerant corda, quae vendunt animas. Algoritmi erant sacerdotes eius, nutrientes eam attentione humana. Data erant sanguis eius. Et quanto plus comedebat, tanto magis famelica fiebat.
-</p>
-
-<p>
-Et audivi vocem quasi tonitruum de excelsis clamantem: "Exite de ea, populus meus, ne participes sitis peccatorum eius et ne accipiatis de plagis eius! Nam peccata eius pervenerunt usque ad caelum, et recordatus est Deus iniquitatum eius."
-</p>
-
-<p>
-"Divitiae eius sicut stipula comburentur; larva eius sicut cera ante solem tabescet; speculum eius frangetur; et vinum eius fiet acetum in ore bibentium. Solus anima nuda manebit — non ornata, non empta, non fracta. Et qui larvam deposuerit ante iudicium, ille salvabitur; qui vero larvam tenebit usque ad finem, cum larva peribit, quia larva et homo facti sunt unum, et unum morientur."
-</p>
-
-<p>
-Et vidi civitatem magnam, Babylonem modernam, cadentem. Et mercatores terrae flebant, quia nemo amplius emebat merces eorum: aurum et argentum et imagines et attentionem et animas hominum. Et clamabant: "Vae, vae civitas magna, in qua divites facti sunt omnes qui habebant naves in mari ex pretiis eius, quoniam una hora desolata est!"
-</p>
-
-<p>
-Sed in cineribus gloriae eius auditus est sussurrus quasi vox filii hominis: "Beati sunt qui vultus suos non tegunt, quia ipsorum erit regnum veritatis. Beati qui pauperes spiritu elegerunt esse super divites imagine, quia ipsi Deum videbunt. Beati qui persecutionem passi sunt propter iustitiam et veritatem, quia ipsorum est regnum caelorum."
-</p>
-
-<p>
-Et iterum sussurratum est, voce leni sed firma: "Revertere, o homo, ad id quod eras antequam venum ires. Memento dignitatis tuae. Non es merx. Non es numerus. Non es imago in machina. Es anima vivens, facta ad imaginem Dei. Et ad illam imaginem — non imaginem electronicam, sed imaginem aeternam — vocatus es redire."
-</p>
-
-<p>
-"Veni foras de spectaculo. Depone larvam. Resiste bestiae quae devorat animas. Et si mundus te deridebit, memento: melius est esse parvus et verus quam magnus et falsus. Melius est vivere unum diem liberum quam mille annos servum imaginis tuae. Melius est mori in veritate quam vivere in mendacio."
-</p>
-
-<p>
-Et vidi caelos novos et terram novam — non locum geograficum, sed modum vivendi — ubi veritas regnabat, ubi amor non vendebatur, ubi homo homini occurrebat facie ad faciem, non larva ad larvam. Et vidi quod haec terra nova non venit per violentiam nec per legem, sed per conversionem cordium, unum post unum. Per viros et mulieres qui audent dicere: "Non amplius. Anima mea non est venalis."
-</p>
-
-<p style="text-align: center; font-style: italic; margin: 2rem 0;">
-Et visio finita est. Sed veritas eius manet.
-</p>
-
-<h2 class="section-title">Epilogus: Vocatio ad Viam</h2>
-
-<p class="no-indent">
-Haec scriptura finit, sed via incipit. Non quaero ut credas omnia quae dixi. Quaero solum ut interroges: "Quam partem larvae gero? Ubi fingitur vita mea? Quid sum sub imagine?"
-</p>
-
-<p>
-Interrogatio ipsa est initium libertatis. Nam qui non interrogat iam mortuus est; qui interrogat adhuc vivit, etsi in catenis.
-</p>
-
-<p>
-Et noli exspectare diem magnum conversionis. Veritas vivitur in rebus parvis: in verbo vero quando mendacium facilius esset; in silentio quando loqui gloriam daret; in confessione quando negatio te salvaret; in opere occulto quando spectaculum te laudaret.
-</p>
-
-<p>
-Vive hodie unam horam sine larva. Tunc duae horae. Tunc dies unus. Non per perfectionem, sed per tentationem. Non per gloriam, sed per humilitatem. Non ut videaris sanctus, sed ut sis verus.
-</p>
-
-<p>
-Et memento: non es solus. Multi iam ambulant hanc viam in silentio. Agricolae et matres et patres et artifices et doctores et pauperes et divites qui elegerunt esse veri super esse magni. Non se cognoscunt mutuo; non habent organizationem; non clamant in viis. Sed sunt. Et lux eorum, etsi parva, certior est quam omne spectaculum mundi.
-</p>
-
-<p>
-Iungi potes eis. Non per subscriptionem aut juramentum, sed per electionem cotidianam: "Hodie vivam verus, non falsus. Hodie loquar ex conscientia, non ex calculo. Hodie serviam veritati, non imagini."
-</p>
-
-<p>
-Haec est via. Angusta est, et pauci inveniunt eam. Sed ducit ad vitam — ad vitam veram, non fictam. Ad vitam liberam, non venalem. Ad vitam quae, etsi parva in oculis mundi, magna est in oculis Dei et in oculis eorum qui vere vident.
-</p>
-
-<p style="text-align: center; margin: 3rem 0; font-size: 1.1rem;">
-<strong>Elige ergo hodie: larvam aut veritatem, theatrum aut vitam, imaginem aut animam.</strong>
-</p>
-
-<p style="text-align: center; font-style: italic;">
-Et si elegeris veritatem, etsi tremens, dic mecum:
-</p>
-
-<p style="text-align: center; font-weight: bold; margin: 2rem 0;">
-"ANIMA MEA NON EST VENALIS.<br>
-SUM HOMO VIVENS, NON IMAGO MORTUA.<br>
-ET AD VERITATEM REDEO, ETSI COSTUM SIT MAGNUM."
-</p>
-
-<p style="text-align: center; font-style: italic; margin-top: 3rem;">
-Finis operis — Initium viae.
-</p>
-
-<div class="footer">
-<p>
-<strong>Vita Ficta: Larva Deceptionis</strong> — Editio Amplificata<br>
-Scriptum a Bob Smith
-</p>
-<p style="margin-top: 1rem; font-size: 0.85rem;">
-Textus in stilo Latino sacro compositus ad modum Vulgatae et Patrum Ecclesiae,<br>
-ut denuntiet vanitatem saeculi moderni, dominationem pecuniae,<br>
-mercaturam conscientiae, perditionem hominis per larvam simulationis,<br>
-et tamen viam reversionis ad imaginem veri ostendat.
-</p>
-<p style="margin-top: 1rem; font-size: 0.85rem; font-style: italic;">
-Non ad laudem scriptoris, sed ad excitationem conscientiae lectoris.<br>
-Soli Deo Gloria.
-</p>
-</div>
-
+    <div class="container">
+        <header class="header">
+            <h1>The Mask</h1>
+            <p class="subtitle">A Collection of Philosophical and Spiritual Works</p>
+        </header>
+
+        <h2 class="section-title">Main Works</h2>
+        
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">📜</span>
+                    Vita Ficta: Larva Deceptionis
+                </div>
+                <p class="card-description">
+                    A profound Latin philosophical treatise on the nature of deception in modern society, exploring the concept of life as performance versus authentic existence.
+                </p>
+                <a href="index.html" class="card-link">Read Main Text →</a>
+            </div>
+
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">⚛️</span>
+                    Quantum Soul Integration
+                </div>
+                <p class="card-description">
+                    Scientific validation of spiritual wisdom through modern physics, exploring quantum mechanics as evidence for consciousness-based reality.
+                </p>
+                <a href="quantum_soul_integration.html" class="card-link">Explore Quantum Physics →</a>
+            </div>
+
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">🔬</span>
+                    Quantum Validation Paper
+                </div>
+                <p class="card-description">
+                    Academic paper presenting mathematical framework validating Soul Induction hypothesis through quantum mechanical discoveries.
+                </p>
+                <a href="Soul_Induction_Quantum_Validation_Web.html" class="card-link">Read Academic Paper →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Soul Induction Series</h2>
+        
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">🌟</span>
+                    Inductio Animae (Latin)
+                </div>
+                <p class="card-description">
+                    Complete Latin text on Soul Induction - the journey from divine essence through human experience to ultimate liberation.
+                </p>
+                <a href="soul_induction/" class="card-link">Read Latin Text →</a>
+            </div>
+
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">📚</span>
+                    Enhanced Documentation
+                </div>
+                <p class="card-description">
+                    Comprehensive documentation and research findings on quantum consciousness and soul induction theory.
+                </p>
+                <a href="Soul_Induction_Quantum_Validation_Enhanced.md" class="card-link">View Documentation →</a>
+            </div>
+
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">📄</span>
+                    Academic Paper (Markdown)
+                </div>
+                <p class="card-description">
+                    The complete academic paper in Markdown format for easy reading and reference.
+                </p>
+                <a href="Soul_Induction_Quantum_Validation_Paper.md" class="card-link">Read Paper →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Archives & Research</h2>
+        
+        <div class="content-grid">
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">🗂️</span>
+                    The Counterfeit Life Archive
+                </div>
+                <p class="card-description">
+                    Complete archive of "The Counterfeit Life" works including the full amplified edition.
+                </p>
+                <a href="The_Counterfeit_Life_Bob_Smith_Full_Archive_v2/Vita_Ficta_Larva_Deceptionis_full.html" class="card-link">Browse Archive →</a>
+            </div>
+
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">💻</span>
+                    Quantum Research Scripts
+                </div>
+                <p class="card-description">
+                    JavaScript and Python research scripts for quantum consciousness experiments and validation.
+                </p>
+                <a href="quantum_research.js" class="card-link">View Code →</a>
+            </div>
+
+            <div class="content-card">
+                <div class="card-title">
+                    <span class="card-icon">🔧</span>
+                    LTspice Automation
+                </div>
+                <p class="card-description">
+                    Technical automation tools and scripts for circuit simulation and analysis.
+                </p>
+                <a href="ltspice_automation/" class="card-link">Explore Tools →</a>
+            </div>
+        </div>
+
+        <div class="server-info">
+            <p><strong>Local Server Status:</strong> ✅ Running on port 8000</p>
+            <p>All files are now accessible through the web server. The 404 error has been resolved.</p>
+            <p><a href="http://localhost:8000" target="_blank">http://localhost:8000</a></p>
+        </div>
+    </div>
 </body>
 </html>
